@@ -1,0 +1,48 @@
+.navBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 2rem;
+}
+
+li {
+    font-size: 1.1rem;
+    font-weight: 700;
+    list-style: none;
+    color: hsl(257, 7%, 63%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.navBar > ul > li:hover {
+    color: hsl(255, 11%, 22%);
+}
+
+.navbarBtns {
+    margin-left: auto;
+    margin-right: 10rem;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.greyBtn {
+    color: hsl(257, 7%, 63%);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.greyBtn:hover {
+    background-color: transparent;
+    color: hsl(255, 11%, 22%);
+}
