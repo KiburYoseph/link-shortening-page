@@ -1,0 +1,87 @@
+.linkForm {
+    position: relative;
+    bottom: 17%;
+}
+
+.formSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/bg-shorten-desktop.svg);
+    background-color: hsl(257, 27%, 26%);
+    width: 74%;
+    height: 9rem;
+    border-radius: 12px;
+    margin-top: 10rem;
+    margin-left: 15rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+input {
+    width: 60%;
+    height: 3rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+form > button {
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.listSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10.5rem;
+}
+
+.listSection > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.listSection > ul > li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 73.4%;
+    background-color: rgb(255, 255, 255);
+    color: hsl(180, 66%, 49%);
+    gap: 1.3rem;
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.listSection > ul > li > p {
+    cursor: text;
+}
+
+.mainLink {
+    margin-right: auto;
+    color: hsl(260, 8%, 14%);
+    font-weight: 500;
+}
+
+.listSection > ul > li > button {
+    border-radius: 5px;
+    padding: 0.7rem 2rem;
+}

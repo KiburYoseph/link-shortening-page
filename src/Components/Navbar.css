@@ -3,6 +3,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 3rem;
+    className='padded'
 }
 
 ul {
@@ -30,7 +31,7 @@ li {
 
 .navbarBtns {
     margin-left: auto;
-    margin-right: 10rem;
+    margin-right: 15rem;
     display: flex;
     gap: 1.6rem;
 }

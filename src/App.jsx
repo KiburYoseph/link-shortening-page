@@ -1,13 +1,21 @@
 import { useState } from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
+import LinkForm from './Components/LinkForm'
+import AdvancedStats from './Components/AdvancedStats'
 import './App.css'
+
+
 
 const App = () => {
   return (
-    <main className='padded'>
+    <main>
       <Navbar/>
       <Hero/>
+      <section className='greyBG'>
+        <LinkForm/>
+        <AdvancedStats/>
+      </section>
     </main>
   )
 }

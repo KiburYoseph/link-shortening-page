@@ -3,7 +3,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   return (
-    <section className='navBar'>
+    <section className='navBar padded'>
         <img src='src/assets/logo.svg'></img>
         <ul>
             <li>Features</li>
