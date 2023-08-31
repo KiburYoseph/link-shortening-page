@@ -4,6 +4,12 @@
     gap: 2rem;
 }
 
+@media (max-width: 830px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+}
+
 .hero > img {
     position: relative;
     left: 5%;
