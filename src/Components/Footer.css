@@ -1,0 +1,59 @@
+.footerSection {
+    background-color: hsl(260, 8%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6rem;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+}
+
+.footerSection > h1 {
+    color: white;
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 0px;
+}
+
+.footerSection > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+ul > .listLabels {
+    color: white !important;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+ul > .listLabels:hover {
+    color: whtie;
+}
+
+.footerSection > ul > li {
+    font-weight: 500;
+}
+
+.footerSection > ul > li:hover {
+    color: hsl(180, 66%, 49%);
+}
+
+.footerSection > .socialsList {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footerSection > .socialsList > img {
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.footerSection > .socialsList > img:hover {
+    opacity: 0.7;
+}
