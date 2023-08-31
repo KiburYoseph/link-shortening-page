@@ -3,10 +3,29 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 6rem;
+    gap: clamp(0rem, 5vw, 6rem);
     padding-top: 4.5rem;
     padding-bottom: 5rem;
 }
+
+@media (max-width: 810px) {
+    .footerSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem !important;
+    }
+
+    .footerSection > h1 {
+        text-align: center !important;
+        margin-left: 2.5rem !important;
+    }
+
+    .footerSection > ul {
+        align-items:  center !important;
+    }
+}
+
 
 .footerSection > h1 {
     color: white;
@@ -21,6 +40,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     gap: 0.4rem;
+    margin: 0px;
 }
 
 ul > .listLabels {
