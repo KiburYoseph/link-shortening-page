@@ -1,20 +1,26 @@
 .linkForm {
     position: relative;
     bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5rem;
 }
 
 .formSection {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: flex-start;
     background: url(../assets/bg-shorten-desktop.svg);
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
-    width: 74%;
+    width: 74.5%;
     height: 9rem;
     border-radius: 12px;
-    margin-top: 10rem;
-    margin-left: 15rem;
+    margin-top: 0rem;
+    margin-left: 9.6rem;
 }
 
 form {
@@ -48,6 +54,44 @@ form > button {
     align-items: center;
     padding-left: 10.5rem;
 }
+
+
+@media (max-width: 865px) {
+
+    .formSection {
+        width: 64%;
+    }
+
+    .formSection > form {
+        flex-direction: column;
+    }
+
+    .formSection > form > input {
+        width: 80%;
+    }
+
+    .formSection > form > button {
+        width: 86%;
+    }
+
+    .listSection > ul > li {
+        width: 60% !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0px !important;
+    }
+
+    .listSection > ul > li > button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .mainLink {
+        margin-right: 0px !important;
+        margin-bottom: 0px;
+    }
+}
+
 
 .listSection > ul {
     display: flex;
