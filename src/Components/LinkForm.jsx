@@ -1,21 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 import './LinkForm.css'
 
 
 const LinkForm = () => {
-
+    localStorage.setItem("ITEMS", [])
     const [userLink, setUserLink] = useState('');
-    const [linkList, setLinkList] = useState([]);
-    const [recievedLink, setRecievedLink] = useState('');
-    const [loading, setLoading] = useState(true)
+    const [linkList, setLinkList] = useState(() => {
+        const localValue = localStorage.getItem("ITEMS")
+        if(localValue == null || localValue == "") return []
+        console.log(localValue)
+        return JSON.parse(localValue)
+    });
     const [error, setError] = useState(false)
 
+
+    useEffect(() => {
+        localStorage.setItem("ITEMS", JSON.stringify(linkList))
+      }, [linkList])
+    
+
     const addList = () => {
-        if(loading == true) {
-            setLoading(!loading)
-            return null
-        }
 
         if(error == true) {
             console.log("There was an error")
@@ -34,20 +39,36 @@ const LinkForm = () => {
     }
 
     const shorten = () => {
-                fetch(`https://api.shrtco.de/v2/shorten?url=${userLink}`)
-                .then(data => {
-                    if (!data.ok) {
-                      throw Error('Request failed');
-                    }
-                    
-                    setError(false)
-                    return data.json();
-                  })
-                .then(item => setRecievedLink(item.result.full_short_link))
-                .catch(error => {
-                    setError(true)
-                })
-                .then(addList())
+            setError(false)
+            fetch(`https://api.shrtco.de/v2/shorten?url=${userLink}`)
+            .then(data => {
+            if (!data.ok) {
+            throw Error('Request failed');
+            }
+            return data.json();
+            })
+            .then(item => {
+                if(error == true) {
+                    console.log("There was an error")
+                    return null
+                }
+        
+                else {
+                    setLinkList(currentList => {
+                        return [...currentList, {
+                             longLink: userLink,
+                             shortLink: item.result.full_short_link,
+                             id: crypto.randomUUID()
+                         }]
+                     })
+                }
+
+            })
+            .catch(error => {
+                setError(true)
+            })
+
+
     }
 
     return (
