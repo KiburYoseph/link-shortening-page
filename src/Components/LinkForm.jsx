@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import React from 'react'
 import './LinkForm.css'
 
@@ -13,7 +14,6 @@ const LinkForm = () => {
         return JSON.parse(localValue)
     });
     const [error, setError] = useState(false)
-
 
     useEffect(() => {
         localStorage.setItem("ITEMS", JSON.stringify(linkList))
@@ -32,7 +32,8 @@ const LinkForm = () => {
                 return [...currentList, {
                      longLink: userLink,
                      shortLink: recievedLink,
-                     id: crypto.randomUUID()
+                     id: crypto.randomUUID(),
+                     copied: false
                  }]
              })
         }
@@ -55,20 +56,41 @@ const LinkForm = () => {
         
                 else {
                     setLinkList(currentList => {
-                        return [...currentList, {
+                        return[...currentList, {
                              longLink: userLink,
                              shortLink: item.result.full_short_link,
                              id: crypto.randomUUID()
                          }]
                      })
-                }
+                    setUserLink("")
+                    }
 
             })
             .catch(error => {
                 setError(true)
             })
+    }
 
+    const handleCopied = (id) => {
+       setLinkList(currentList => {
+        return currentList.map(list => {
+            if (list.id == id) {
+                return {...list, copied:true}
+            }
+            return list
+        })
+       })
 
+       setTimeout(() => {
+        setLinkList(currentList => {
+            return currentList.map(list => {
+                if (list.id == id) {
+                    return {...list, copied:false}
+                }
+                return list
+            })
+           })
+       }, 2000);
     }
 
     return (
@@ -83,7 +105,7 @@ const LinkForm = () => {
                 <section className='listSection'>
                 <ul>
                     {linkList.map( list => {
-                        return <li key={list.id}><p className='mainLink'>{list.longLink}</p><p className='shortenedLink'>{list.shortLink}</p><button>Copy</button></li>
+                        return <li key={list.id}><p className='mainLink'>{list.longLink}</p><p className='shortenedLink'>{list.shortLink}</p><CopyToClipboard text={list.shortLink} onCopy={() => handleCopied(list.id)}>{list.copied ? <button className='copiedButton'>Copied!</button> : <button>Copy</button>}</CopyToClipboard></li>
                     })}   
                 </ul>
             </section>

@@ -149,3 +149,7 @@ form > button {
     border-radius: 5px;
     padding: 0.7rem 2rem;
 }
+
+.copiedButton {
+    background-color: hsl(257, 27%, 26%) !important;
+}
