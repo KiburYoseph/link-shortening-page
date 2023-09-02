@@ -11,6 +11,13 @@ body {
     padding-left: 15rem;
 }
 
+@media(max-width: 930px) {
+    .padded {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 button {
     background-color: hsl(180, 66%, 49%);
     border: none;

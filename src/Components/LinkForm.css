@@ -1,6 +1,6 @@
 .linkForm {
     position: relative;
-    bottom: 15%;
+    bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -63,9 +63,9 @@ form > button {
 .listSection {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-left: 10.5rem;
+    margin-left: 0px;
 }
 
 
@@ -77,8 +77,7 @@ form > button {
 
     .formSection {
         width: 64%;
-        align-self: flex-start !important;
-        margin-left: 9.6rem !important;
+        align-self: center !important;
     }
 
     .formSection > form {
@@ -116,10 +115,11 @@ form > button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
-    width: 100%;
+    width: 95%;
     margin-top: 2rem;
+    margin-left: -2rem;
 }
 
 .listSection > ul > li {

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 7rem;
+    padding-top: 4rem;
 }
 
 .ASTextSection {
@@ -38,6 +38,7 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    min-height: 20rem;
     padding: 0px;
     margin-bottom: 7rem;
     margin-left: 3rem;
@@ -103,6 +104,8 @@
 }
 
 .imgDiv {
+    position: relative;
+    bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,8 +113,6 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    position: relative;
-    bottom: 15%;
     margin-left: 0rem;
 }
 
