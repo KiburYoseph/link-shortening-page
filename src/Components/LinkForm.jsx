@@ -5,7 +5,6 @@ import './LinkForm.css'
 
 
 const LinkForm = () => {
-    localStorage.setItem("ITEMS", [])
     const [userLink, setUserLink] = useState('');
     const [linkList, setLinkList] = useState(() => {
         const localValue = localStorage.getItem("ITEMS")
@@ -93,6 +92,12 @@ const LinkForm = () => {
        }, 2000);
     }
 
+    const handleDelete = (id) => {
+        setLinkList(currentList => {
+            return currentList.filter(item => item.id !== id)
+        })
+    }
+
     return (
         <section className='linkForm'>
             <section className='formSection'>
@@ -105,7 +110,7 @@ const LinkForm = () => {
                 <section className='listSection'>
                 <ul>
                     {linkList.map( list => {
-                        return <li key={list.id}><p className='mainLink'>{list.longLink}</p><p className='shortenedLink'>{list.shortLink}</p><CopyToClipboard text={list.shortLink} onCopy={() => handleCopied(list.id)}>{list.copied ? <button className='copiedButton'>Copied!</button> : <button>Copy</button>}</CopyToClipboard></li>
+                        return <li key={list.id}><p className='mainLink'>{list.longLink}</p><p className='shortenedLink'>{list.shortLink}</p><CopyToClipboard text={list.shortLink} onCopy={() => handleCopied(list.id)}>{list.copied ? <button className='copiedButton'>Copied!</button> : <button>Copy</button>}</CopyToClipboard><div className='deleteBtn' onClick={() => handleDelete(list.id)}>X</div></li>
                     })}   
                 </ul>
             </section>
