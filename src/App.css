@@ -11,6 +11,15 @@ body {
     padding-left: 15rem;
 }
 
+
+@media(max-width: 1090px) {
+    .padded {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+
+
 @media(max-width: 930px) {
     .padded {
         padding-left: 2rem;
