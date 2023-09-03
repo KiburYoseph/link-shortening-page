@@ -3,7 +3,8 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 3rem;
-    className='padded'
+    position: relative;
+    padding-right: 0rem !important;
 }
 
 ul {
@@ -46,4 +47,97 @@ li {
 .greyBtn:hover {
     background-color: transparent;
     color: hsl(255, 11%, 22%);
+}
+
+.hamburgerBtn {
+    background-color: transparent;
+    margin-left: auto;
+    transition: 300ms;
+}
+
+.hamburgerBtn:hover {
+    background-color: transparent;
+    scale: 1.1;
+}
+
+.hamburgerBtn > img {
+    width: 2.6rem;
+}
+
+.openHamburger {
+    position: absolute;
+    top: 5rem;
+    z-index: 99;
+
+    background-color: hsl(257, 27%, 26%);
+    width: 90%;
+    min-height: 20rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 530px) {
+    .openHamburger {
+        width: 86%;
+    }
+}
+
+@media (max-width: 345px) {
+    .openHamburger {
+        width: 80%;
+    }
+}
+
+
+.openHamburger > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 1rem 1rem;
+}
+
+.openHamburger > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.openHamburger > ul > li:hover {
+    color: rgb(199, 199, 199);
+}
+
+.openHamburger > button {
+    width: 80%;
+}
+
+.greyBtn.login {
+    color: white !important;
+}
+
+.greyBtn.login:hover {
+    color: rgb(199, 199, 199) !important;
+}
+
+@media (max-width:740px) {
+    .navBar > ul {
+        display: none !important;
+    }
+
+    .navbarBtns {
+        display: none !important;
+    }
+}
+
+hr {
+    width: 80%;
+    color: hsl(257, 27%, 40%);
 }

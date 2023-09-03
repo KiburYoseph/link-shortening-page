@@ -167,6 +167,14 @@ form > button {
     .deleteBtn{
         opacity: 1;
         width: 100%;
+        background-color: hsl(0, 87%, 67%);
+        border-radius: 5px;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .deleteBtn:hover {
+        background-color: hsl(0, 100%, 73%);
     }
 }
 
