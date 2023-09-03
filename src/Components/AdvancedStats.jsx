@@ -6,7 +6,7 @@ const AdvancedStats = () => {
         <main className='advancedStats'>
             <section className='ASTextSection'>
                 <h1>Advanced Statistics</h1>
-                <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+                <p>Track how your links are performing across the web with<br/> our advanced statistics dashboard.</p>
             </section>
             <section className='ASBoxesSection'>
                 <div className="boxes box1">
