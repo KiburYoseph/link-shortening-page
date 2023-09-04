@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    background: url(./src/assets/bg-shorten-desktop.svg);
+    background: url(../src/assets/bg-shorten-desktop.svg);
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
     width: 74.5%;
