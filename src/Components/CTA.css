@@ -1,5 +1,5 @@
 .CTASection {
-    background: url(./src/assets/bg-boost-desktop.svg);
+    background: url(../assets/bg-boost-desktop.svg);
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
     display: flex;
