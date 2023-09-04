@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import illustrationWorking from '../assets/illustration-working.svg'
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
             <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
             <button>Get Started</button>
         </div>
-        <img src='src/assets/illustration-working.svg'/>
+        <img src={illustrationWorking} />
     </section>
   )
 }

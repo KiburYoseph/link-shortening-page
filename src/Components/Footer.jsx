@@ -1,5 +1,9 @@
 import React from 'react'
 import './Footer.css'
+import facebook from '../assets/icon-facebook.svg'
+import twitter from '../assets/icon-twitter.svg'
+import pinterest from '../assets/icon-pinterest.svg'
+import instagram from '../assets/icon-instagram.svg'
 
 const Footer = () => {
     return (
@@ -25,10 +29,10 @@ const Footer = () => {
                 <li>Contact</li>
             </ul>
             <ul className='socialsList'>
-                <img src='../src/assets/icon-facebook.svg'/>
-                <img src='../src/assets/icon-twitter.svg'/>
-                <img src='../src/assets/icon-pinterest.svg'/>
-                <img src='../src/assets/icon-instagram.svg'/>
+                <img src={facebook}/>
+                <img src={twitter}/>
+                <img src={pinterest}/>
+                <img src={instagram}/>
             </ul>
 
         </section>

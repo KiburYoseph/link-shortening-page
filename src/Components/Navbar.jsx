@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import React from 'react'
 import './Navbar.css'
+import logo from '../assets/logo.svg'
+import burgerMenu from '../assets/burger-menu-svgrepo-com.svg'
 
 
 
@@ -11,7 +13,7 @@ const Navbar = () => {
 
   return (
     <section className='navBar padded'>
-        <img src='src/assets/logo.svg'></img>
+        <img src={logo}></img>
           <ul>
               <li>Features</li>
               <li>Pricing</li>
@@ -23,7 +25,7 @@ const Navbar = () => {
               <button>Sign Up</button>
           </div>
           <button className='hamburgerBtn' onClick={() => setOpen(!open)}>
-            <img src='src/assets/burger-menu-svgrepo-com.svg'/>
+            <img src={burgerMenu}/>
           </button>
           { open ? 
           
