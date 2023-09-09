@@ -18,7 +18,7 @@
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
     width: 74.5%;
-    height: 9rem;
+    min-height: 9rem;
     border-radius: 12px;
     margin-top: 0rem;
 }
