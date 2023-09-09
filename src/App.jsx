@@ -10,7 +10,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <main>
+    <main className='all'>
       <Navbar/>
       <Hero/>
       <section className='greyBG'>
